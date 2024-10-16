@@ -11,13 +11,7 @@ import * as React from "react"
 import Image from "next/image"
 
 import { Button } from "@/components/ui/button"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+  
 import { Input } from "@/components/ui/input"
 import {
   Form,
@@ -28,7 +22,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form"
-import { createTrash, prueba } from "@/lib/actions/trash.actions";
+import { createTrash, } from "@/lib/actions/trash.actions";
 
 const FormSchema = z.object({
   ci: z.string().min(2, {
@@ -75,7 +69,7 @@ export function TrashForm() {
         city: data.city,
       };
       // const newTrash = await createTrash(trash);
-      let newTrash = await createTrash(trash);
+      const newTrash = await createTrash(trash);
       // while(!newTrash) {
       //   newTrash = await createTrash(trash);
       // }

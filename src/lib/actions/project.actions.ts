@@ -3,7 +3,6 @@
 import { ID } from "node-appwrite";
 
 import {
-  TRASH_COLLECTION_ID,
   DATABASE_ID,
   databases,
   PROJECT_COLLECTION_ID,

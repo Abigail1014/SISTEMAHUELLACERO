@@ -1,10 +1,7 @@
 "use server";
 
-import { revalidatePath } from "next/cache";
-import { ID, Query } from "node-appwrite";
+import { ID,  } from "node-appwrite";
 import { InputFile } from "node-appwrite/file";
-
-import { Project } from "../../../types/appwrite.types";
 
 import {
   BUCKET_ID,
@@ -14,9 +11,8 @@ import {
   PROJECT_ID,
   databases,
   storage,
-  users,
 } from "../appwrite.config";
-import { formatDateTime, parseStringify } from "../utils";
+import {parseStringify } from "../utils";
 
 // REGISTER ORG
 export const registerOrganization = async ({

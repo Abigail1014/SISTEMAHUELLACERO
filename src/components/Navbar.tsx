@@ -5,14 +5,11 @@ import Link from "next/link"
 
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { Button } from "./ui/button"
 
 export default function Navbar({ admin }: { admin: boolean }) {
   return (

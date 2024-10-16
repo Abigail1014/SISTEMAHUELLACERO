@@ -103,7 +103,7 @@ export function ProjectForm() {
         responsible: data.responsible,
       };
       // const newTrash = await createTrash(trash);
-      let newProject = await createProject(project);
+      const newProject = await createProject(project);
       // while(!newTrash) {
       //   newTrash = await createTrash(trash);
       // }
