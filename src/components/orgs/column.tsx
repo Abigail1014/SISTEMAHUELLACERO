@@ -15,29 +15,29 @@ export type Orgs = {
 }
 
 export const columnsOrgs: ColumnDef<Orgs>[] = [
-  {
-    accessorKey: "logo",
-    header: "Logo",
-    cell: ({ row }) => {
-      const logo = row.getValue("logo") as string
-      return (
-        <Image src={logo} width={30} height={30} alt="" className="mr-2" />
-      )
-    },
-  },
+  // {
+  //   accessorKey: "logo",
+  //   header: "Logo",
+  //   cell: ({ row }) => {
+  //     const logo = row.getValue("logo") as string
+  //     return (
+  //       <Image src={logo} width={30} height={30} alt="ljnon" className="mr-2" />
+  //     )
+  //   },
+  // },
   {
     accessorKey: "organization",
     header: "Organización",
-    cell: ({ row }) => {
-      const logo = row.getValue("logo") as string
-      const organizacion = row.getValue("organization") as string
-      return (
-        <div className="flex">
-          <Image src={logo} width={30} height={30} alt="" className="mr-2" />
-          <p>{organizacion}</p>
-        </div>
-      )
-    },
+    // cell: ({ row }) => {
+    //   const logo = row.getValue("logo") as string
+    //   const organizacion = row.getValue("organization") as string
+    //   return (
+    //     <div className="flex">
+    //       <Image src={logo} width={30} height={30} alt="" className="mr-2" />
+    //       <p>{organizacion}</p>
+    //     </div>
+    //   )
+    // },
   },
   {
     accessorKey: "socialMedia",

@@ -18,12 +18,18 @@ const Partners = () => {
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <Image src="/assets/images/bolivia.jpg" width={300} height={300} alt='logo' className="w-full"/>
+                  <Image src="/assets/images/b.jpg" width={300} height={300} alt='logo' className="w-full"/>
                 </CardContent>
               </Card>
             </div>
           </CarouselItem>
-          <CarouselItem>
+          <CarouselItem><div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-square items-center justify-center p-6">
+                  <Image src="/assets/images/mollecode.jpg" width={300} height={300} alt='logo' className="w-full"/>
+                </CardContent>
+              </Card>
+            </div>
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">

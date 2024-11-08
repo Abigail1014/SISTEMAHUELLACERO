@@ -1,6 +1,6 @@
 "use server";
 
-import { ID,  } from "node-appwrite";
+import { ID, Query } from "node-appwrite";
 import { InputFile } from "node-appwrite/file";
 
 import {
@@ -50,5 +50,23 @@ export const registerOrganization = async ({
     return parseStringify(newOrganization);
   } catch (error) {
     console.error("An error occurred while creating a new organization:", error);
+    
+  }
+};
+
+export const getRecentOrganizationList = async () => {
+  try {
+    const data = await databases.listDocuments(
+      DATABASE_ID!,
+      ORGANIZATION_COLLECTION_ID!,
+      [Query.orderDesc("$createdAt")]
+    );
+
+    return parseStringify(data.documents);
+  } catch (error) {
+    console.error(
+      "An error occurred while retrieving the recent trash tables:",
+      error
+    );
   }
 };

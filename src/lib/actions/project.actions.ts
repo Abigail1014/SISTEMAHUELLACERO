@@ -1,6 +1,6 @@
 "use server";
 
-import { ID } from "node-appwrite";
+import { ID, Query } from "node-appwrite";
 
 import {
   DATABASE_ID,
@@ -24,5 +24,22 @@ export const createProject = async (
     return parseStringify(newProject);
   } catch (error) {
     console.error("An error occurred while creating a new trash:", error);
+  }
+};
+
+export const getRecentProjectList = async () => {
+  try {
+    const data = await databases.listDocuments(
+      DATABASE_ID!,
+      PROJECT_COLLECTION_ID!,
+      [Query.orderDesc("$createdAt")]
+    );
+
+    return parseStringify(data.documents);
+  } catch (error) {
+    console.error(
+      "An error occurred while retrieving the recent trash tables:",
+      error
+    );
   }
 };

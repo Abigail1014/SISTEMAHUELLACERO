@@ -19,13 +19,13 @@ const Donate = () => {
               objective = "$342"
               raised = "$56"
               goal = "$86"
-              buttonLink = "https://www.facebook.com/ecossmarket"
-              buttonText = "Únete a la comunidad"
+              buttonLink = "https://www.mollecode.co/comunidad"
+              buttonText = "Conviertete en un embajador"
           />
           <DonateCard
               imageUrl = "/assets/images/basura_1.jpg"
               imageAlt = "Biodiversidad"
-              subtitle = "Recaudado"
+              subtitle = "Conoce a organizaciones"
               subtitleData = "$25"
               subtitlePercentage = "83%"
               progressPercentage = {83}
@@ -33,7 +33,7 @@ const Donate = () => {
               objective = "$34"
               raised = "$56"
               goal = "$86"
-              buttonLink = "https://www.facebook.com/ecossmarket"
+              buttonLink = "https://www.mollecode.co/rescate"
               buttonText = "Recaudado"
           />
           <DonateCard
@@ -47,22 +47,22 @@ const Donate = () => {
               objective = "$34"
               raised = "$56"
               goal = "$86"
-              buttonLink = "https://www.facebook.com/ecossmarket"
+              buttonLink = "https://www.feria24.co/mollecode"
               buttonText = "Ver más"
           />
           <DonateCard
-              imageUrl = "/assets/images/perro.jpg"
+              imageUrl = "/assets/images/datathon.jpg"
               imageAlt = "3800823"
               subtitle = "Total de basura vendido"
               subtitleData = "$25"
               subtitlePercentage = "83%"
               progressPercentage = {83}
-              title = "Apoya contactando a empresa que compran basura"
+              title = "Apoya a registrar un arbolito"
               objective = "$34"
               raised = "$56"
               goal = "$86"
-              buttonLink = "https://www.facebook.com/ecossmarket"
-              buttonText = "Únete a la comunidad"
+              buttonLink = "https://www.mollecode.co/persona-individual"
+              buttonText = "Planta y riega un arbolito"
           />
         </ul>
     </section>

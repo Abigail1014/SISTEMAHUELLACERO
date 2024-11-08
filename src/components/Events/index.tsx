@@ -21,30 +21,30 @@ const Events = () => {
         <ul className="flex flex-col gap-4 mb-6">
 
           <EventCard
-            month="Dic"
-            date="13"
-            subtitle="Summit"
-            title="Datathon ODS 2025"
-            content="Organizaciones internacionales"
-            link="https://www.facebook.com/ecossmarket"
+            month="Nov"
+            date="23"
+            subtitle="Presenta tu pitch"
+            title="Datathon ODS 2024"
+            content="ODS de investigacion de datos para resolver con una idea de startup"
+            link="https://www.facebook.com/photo/?fbid=993267032816530&set=a.474095908066981"
             linkText="Ver mas sobre el evento"
           />
           <EventCard
             month="Feb"
-            date="23"
-            subtitle="Foro"
-            title="Conoce los paises que creen en la economía circular"
-            content="Respiramos el mismo aire para fortalecernos sin importar nuestro idiomas, estamos listos para una economia circular"
-            link="https://www.facebook.com/ecossmarket"
+            date="6"
+            subtitle="Semilla de Cambio 2025"
+            title="Conoce colegios que reciclan"
+            content="Campaña de reciclaje para actividades de reforestacion"
+            link="https://www.facebook.com/HuellaCeroBo"
             linkText="Ver mas sobre el evento"
           />
           <EventCard
-            month="Mar"
-            date="27"
-            subtitle="Datathon 2024"
-            title="En este Datathon creemos el impacto que puede tener los datos para accionar con todos y para todos"
-            content="Conoce la agenda de nuestros eventos"
-            link="https://www.facebook.com/ecossmarket"
+            month="Dic"
+            date="6"
+            subtitle="Graduacion de mi Arbolito 2025"
+            title="Conoce los arboles que fueron cuidados por grandes semillas de cambio"
+            content="Los datos de los arboles nos ayudan a reciclar"
+            link="https://www.facebook.com/profile.php?id=100093211535999"
             linkText="Ver mas sobre el evento"
           />
 

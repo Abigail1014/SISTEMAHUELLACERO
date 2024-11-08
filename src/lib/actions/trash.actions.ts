@@ -1,6 +1,6 @@
 "use server";
 
-import { ID } from "node-appwrite";
+import { ID, Query } from "node-appwrite";
 
 import {
   TRASH_COLLECTION_ID,
@@ -27,25 +27,19 @@ export const createTrash = async (
   }
 };
 
-export const prueba = async () => {
-  const trash ={
-    ci: "data.ci",
-    description: "data.description",
-    address: "data.address",
-    contact: "data.contact",
-    city: "data.city",
-  }
+export const getRecentTrashList = async () => {
   try {
-    const newTrash = await databases.createDocument(
+    const data = await databases.listDocuments(
       DATABASE_ID!,
       TRASH_COLLECTION_ID!,
-      ID.unique(),
-      trash
+      [Query.orderDesc("$createdAt")]
     );
 
-    // revalidatePath("/");
-    return parseStringify(newTrash);
+    return parseStringify(data.documents);
   } catch (error) {
-    console.error("An error occurred while creating a new trash:", error);
+    console.error(
+      "An error occurred while retrieving the recent trash tables:",
+      error
+    );
   }
-}
+};
