@@ -36,6 +36,10 @@ export const columnsBasura: ColumnDef<Basura>[] = [
     accessorKey: "city",
     header: "City",
   },
+  {
+    accessorKey: "Entregado",
+    header: "Entregado",
+  }
 ]
 
 // ORG
