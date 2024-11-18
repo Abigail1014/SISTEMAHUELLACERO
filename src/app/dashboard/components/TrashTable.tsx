@@ -4,6 +4,7 @@ import { columnsBasura } from "@/components/basura/column"
 import { getRecentTrashList } from "@/lib/actions/trash.actions"
 
 
+
 const TrashTable = async () => {
     const dataBasura = await getRecentTrashList()
   return (

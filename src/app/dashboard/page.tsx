@@ -2,7 +2,29 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import ProjectTable from "./components/ProjectTable"
 import OrganizationTable from "./components/OrganizationTable"
-import TrashTable from "./components/TrashTable"
+// import TrashTable from "./components/TrashTable"
+import { TrashList } from "@/components/TrashList"
+
+const datitos = [
+  {
+    id: "67081e2e003a30aeb45f",
+    ci: "pruebas",
+    description: "pruebas",
+    address: "pruebas",
+    contact: "pruebas",
+    city: "pruebas",
+    userId: "pruebas",
+  },
+  {
+    id: "67081e2e003a30aeb45f",
+    ci: "pruebas",
+    description: "pruebas",
+    address: "pruebas",
+    contact: "pruebas",
+    city: "pruebas",
+    userId: "pruebas",
+  }
+]
 
 export default async function Dashboard ()
  {
@@ -26,9 +48,11 @@ export default async function Dashboard ()
       {/* Orgs */}
       <OrganizationTable />
       {/* Trash */}
-      <TrashTable />
-      
-      
+      {/* <TrashTable /> */}
+      <TrashList
+        trashItems={datitos}
+        currentUserId="admin"
+        currentUserRole="admin"/>
     </div>
   )
 }

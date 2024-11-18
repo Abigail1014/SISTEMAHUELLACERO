@@ -42,13 +42,21 @@ const FormSchema = z.object({
   }),
 })
 
-export function TrashForm() {
+type dataType = {
+  ci: "",
+      description: "",
+      address: "",
+      contact: "",
+      city: "",
+}
+
+export function TrashForm({ initialData }: { initialData?: dataType }) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-    defaultValues: {
+    defaultValues: initialData || {
       ci: "",
       description: "",
       address: "",

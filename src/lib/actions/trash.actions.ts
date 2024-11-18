@@ -43,3 +43,39 @@ export const getRecentTrashList = async () => {
     );
   }
 };
+
+// Editar un formulario
+export async function updateTrash(documentId: string, data: CreateTrashParams, userId: string, userRole: string) {
+  try {
+    // Obtener el documento original para verificar permisos
+    const existingDoc = await databases.getDocument(DATABASE_ID!, TRASH_COLLECTION_ID!, documentId);
+
+    if (existingDoc.userId !== userId && userRole !== "admin") {
+      throw new Error("No tienes permiso para editar este formulario.");
+    }
+
+    const response = await databases.updateDocument(DATABASE_ID!, TRASH_COLLECTION_ID!, documentId, data);
+    return response;
+  } catch (error) {
+    console.error("Error al editar el formulario:", error);
+    throw error;
+  }
+}
+
+// Eliminar un formulario
+export async function deleteTrash(documentId: string, userId: string, userRole: string) {
+  try {
+    // Obtener el documento original para verificar permisos
+    const existingDoc = await databases.getDocument(DATABASE_ID!, TRASH_COLLECTION_ID!, documentId);
+
+    if (existingDoc.userId !== userId && userRole !== "admin") {
+      throw new Error("No tienes permiso para eliminar este formulario.");
+    }
+
+    await databases.deleteDocument(DATABASE_ID!, TRASH_COLLECTION_ID!, documentId);
+    return true;
+  } catch (error) {
+    console.error("Error al eliminar el formulario:", error);
+    throw error;
+  }
+}
